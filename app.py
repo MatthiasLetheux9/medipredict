@@ -11,13 +11,13 @@ st.set_page_config(page_title="MediPredict", layout="centered")
 # --- Chargement modèle ---
 @st.cache_resource
 def load_model():
-    model = joblib.load("model/medipredict_model.pkl")
-    scaler = joblib.load("model/scaler.pkl")
+    model = joblib.load("medipredict_model.pkl")
+    scaler = joblib.load("scaler.pkl")
     return model, scaler
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data/diabetes.csv")
+    df = pd.read_csv("diabetes.csv")
     return df
 
 model, scaler = load_model()
