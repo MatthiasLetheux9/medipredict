@@ -79,7 +79,7 @@ elif page == "Mon profil de risque":
     with st.form("profil_form"):
         pregnancies_na = st.checkbox("La variable 'Nombre de grossesses' ne me concerne pas")
         if pregnancies_na:
-            pregnancies = 1.0  # médiane dataset
+            pregnancies = 0  # médiane dataset
         else:
             pregnancies = st.number_input("Nombre de grossesses", min_value=0, max_value=20, value=1, help="Nombre de grossesses antérieures")
 
